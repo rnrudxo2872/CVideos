@@ -1,5 +1,7 @@
-export const videos = (req,res) => res.send('Videos');
-export const videoUpload = (req,res) => res.send('Videos upload');
-export const videoDetail = (req,res) => res.send('Videos Detail');
-export const videoEdite = (req,res) => res.send('Videos Edite');
-export const videoDelete = (req,res) => res.send('Videos Delete');
+export const home = (req,res) => res.render("home");
+export const search = (req,res) => res.render("search");
+export const videos = (req,res) => res.render('videos');
+export const videoUpload = (req,res) => res.render('videosupload');
+export const videoDetail = (req,res) => res.render('videosDetail');
+export const videoEdite = (req,res) => res.render('videosEdite');
+export const videoDelete = (req,res) => res.render('videosDelete');

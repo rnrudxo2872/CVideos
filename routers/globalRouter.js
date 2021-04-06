@@ -1,23 +1,18 @@
 import express from "express";
+import { join, login, logout } from "../controllers/UsersController";
+import { home, search } from "../controllers/videosController";
 import routes from "../routes";
 const Grouter = express.Router();
 
-Grouter.get(routes.home, (req,res) =>{
-    res.send('global');
-})
+Grouter.get(routes.home,home);
 
-Grouter.get(routes.login, (req,res) =>{
+Grouter.get(routes.login,login)
 
-})
-Grouter.get(routes.logout, (req,res) =>{
+Grouter.get(routes.logout,logout)
 
-})
-Grouter.get(routes.join, (req,res) =>{
+Grouter.get(routes.join,join)
 
-})
-Grouter.get(routes.search, (req,res) =>{
-
-})
+Grouter.get(routes.search,search)
 
 
 
