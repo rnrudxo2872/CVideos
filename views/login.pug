@@ -1,0 +1,10 @@
+extends layout/main
+
+block content
+    form(action="/login", method="post") 
+        input(type="email", name="Email")
+        br
+        input(type="password", name="PassWord")
+        br
+        input(type="button", value="로그인")
+    include partials/socialLogin

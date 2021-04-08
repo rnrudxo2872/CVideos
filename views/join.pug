@@ -1,0 +1,10 @@
+extends layout/main
+
+block content 
+    form(action="/login", method="post")
+        input(type="text", name="name", placeholder="Insert your Name")
+        input(type="email", name="mail", placeholder="Insert your Email")
+        input(type="password", name="password", placeholder="Insert your Password")
+        input(type="password", name="password2", placeholder="Verify Password")
+        input(type="submit", value="회원가입")
+    include partials/socialLogin
