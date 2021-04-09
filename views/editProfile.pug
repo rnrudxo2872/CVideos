@@ -1,0 +1,11 @@
+extends layout/main
+
+block content
+    .form-container
+        form(action=routes.users+routes.editProfile, method="post") 
+            label(for="avatar") 아바타
+            input(type="file", id="avatar",name="avatar")
+            input(type="text", name="name")
+            input(type="email", name="email")
+            input(type="submit", value="수정하기")
+        a.from-container__link(href=routes.users+routes.changePassword) 비밀번호 변경

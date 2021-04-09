@@ -3,8 +3,6 @@ import { videoUpload, videos, videoDetail, videoEdite, videoDelete } from "../co
 import routes from "../routes"
 const Vrouter = express.Router();
 
-Vrouter.get(routes.home,videos);
-
 Vrouter.get(routes.upload, videoUpload);
 
 Vrouter.get(routes.videoDetail,videoDetail);
