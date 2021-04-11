@@ -14,10 +14,10 @@ const app = express();
 
 app.set('view engine','pug');
 app.use(favicon('./public/favicon.ico'));
-//app.use(helmet());
-app.use(helmet({
-    contentSecurityPolicy: false,
-    }));
+app.use(helmet());
+// app.use(helmet({
+//     contentSecurityPolicy: false,
+//     }));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
@@ -25,6 +25,10 @@ app.use(morgan("dev"));
 
 app.use(localsMiddleWare);
 
+app.use(function(req, res, next) {
+    res.setHeader("Content-Security-Policy", "script-src 'self' https://archive.org");
+    return next();
+    });
 
 app.use(routes.home, GlobalRouter);
 app.use(routes.users, UserRouter);

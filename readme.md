@@ -10,3 +10,4 @@ Videos app with nodejs
 - [x] Change Password
 - [ ] Video Detail
 - [ ] Edit Video
+- [ ] Search
