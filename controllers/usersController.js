@@ -15,7 +15,7 @@ export const Postlogin = (req,res) => {
     res.redirect(routes.home);
 }
 
-export const logout = (req,res) => res.render("logout",{pageTitle : "LogOut"});
+export const logout = (req,res) => res.redirect(routes.home);
 
 export const join = (req,res) => res.render("join",{pageTitle : "Join"});
 
