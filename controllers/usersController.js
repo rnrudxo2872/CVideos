@@ -2,6 +2,19 @@ import routes from "../routes";
 
 export const login = (req,res) => res.render("login",{pageTitle : "LogIn"});
 
+export const Postlogin = (req,res) => {
+    
+    //request로 온 body 체크
+    const {
+        body:{
+            email,
+            password
+        }
+    } = req;
+
+    res.redirect(routes.home);
+}
+
 export const logout = (req,res) => res.render("logout",{pageTitle : "LogOut"});
 
 export const join = (req,res) => res.render("join",{pageTitle : "Join"});
@@ -12,7 +25,7 @@ export const Postjoin = (req,res) => {
     const {
         body :{
             name,
-            mail,
+            email,
             password,
             password2
         }

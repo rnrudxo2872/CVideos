@@ -9,6 +9,6 @@ Urouter.get(routes.editProfile,editProfile)
 
 Urouter.get(routes.changePassword, changePassword)
 
-Urouter.get(routes.userDetail, userDetail)
+Urouter.get(routes.userDetail(), userDetail)
 
 module.exports = Urouter;
