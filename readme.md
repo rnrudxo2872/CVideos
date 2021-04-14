@@ -2,12 +2,12 @@
 Videos app with nodejs
 
 # To Do
-- [x] Login
-- [x] Search
+- [ ] Login
+- [ ] Search
 - [ ] User Detail
-- [x] Upload
-- [x] Edit Profile
-- [x] Change Password
+- [ ] Upload
+- [ ] Edit Profile
+- [ ] Change Password
 - [ ] Video Detail
 - [ ] Edit Video
 - [ ] Search

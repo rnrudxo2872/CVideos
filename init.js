@@ -1,3 +1,7 @@
+import './db'
 import app from "./app";
-const port = 3000;
+import dotenv from 'dotenv'
+dotenv.config();
+
+const port = process.env.PORT;
 app.listen(port,function(){console.log('serverlisten'+port);});
