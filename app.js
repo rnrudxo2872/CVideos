@@ -13,6 +13,7 @@ import { localsMiddleWare } from "./middlewares";
 const app = express();
 
 app.set('view engine','pug');
+app.use("/uploads",express.static("uploads"));
 app.use(favicon('./public/favicon.ico'));
 app.use(helmet());
 // app.use(helmet({
