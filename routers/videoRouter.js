@@ -9,9 +9,9 @@ Vrouter.post(routes.upload, UploadVideo,PostvideoUpload);
 
 Vrouter.get(routes.videoDetail(),videoDetail);
 
-Vrouter.get(routes.videoEdite,videoEdite);
+Vrouter.get(routes.videoEdite(),videoEdite);
 
-Vrouter.get(routes.videoDelete,videoDelete);
+Vrouter.get(routes.videoDelete(),videoDelete);
 
 
 export default Vrouter;
