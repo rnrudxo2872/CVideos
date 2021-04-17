@@ -40,10 +40,9 @@ export const videoDetail = async(req,res) => {
     const {
         params:{id}
     } = req;
-    
+
     try {
         const videos = await Videos.findById(id);
-        console.log(videos.fileUrl);
         res.render('videosDetail', {pageTitle : "Video Detail", videos})
 
     } catch (error) {
@@ -51,6 +50,30 @@ export const videoDetail = async(req,res) => {
     }  
 };
 
-export const videoEdite = (req,res) => res.render('videosEdite', {pageTitle : "Video Edit"});
+export const videoEdite = async(req,res) => {
+    const {
+        params:{id}
+    } = req;
+    try {
+        const video = await Videos.findById(id);
+        res.render('videosEdite', {pageTitle : "Video Edit", video});
+    } catch (error) {
+        res.redirect(routes.home);
+    }
+};
+
+export const PostvideoEdite = async(req,res) =>{
+    const {
+        params : {id},
+        body:{title,description}
+    } = req;
+    
+    try {
+        await Videos.findByIdAndUpdate({_id:id},{title, description});
+        res.redirect(routes.videos+routes.videoDetail(id));
+    } catch (error) {
+     res.redirect(routes.home);   
+    }
+}
 
 export const videoDelete = (req,res) => res.render('videosDelete', {pageTitle : "Video Delete"});

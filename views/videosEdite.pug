@@ -2,9 +2,9 @@ extends layout/main
 
 block content
     .form-container
-        form(action=routes.videos+routes.videoEdite, method="post")
-            input(type="text", name="title", placeholder="Title")
-            textarea(name="description", cols="30", rows="10", placeholder="Description")
+        form(action=routes.videos+routes.videoEdite(video._id), method="post")
+            input(type="text", name="title", value=`${video.title}`)
+            textarea(name="description", cols="30", rows="10")=video.description
             input(type="submit", value="수정하기")
         a.form-container__link.form-container__link--delete(href=routes.videos+routes.videoDelete)
             | 삭제하기 
