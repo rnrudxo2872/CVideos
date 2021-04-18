@@ -1,6 +1,7 @@
 import express from "express";
-import { changePassword, editProfile, userDetail, users } from "../controllers/UsersController";
+import { changePassword, editProfile, userDetail, users } from "../controllers/usersController";
 import routes from "../routes"
+
 const Urouter = express.Router();
 
 Urouter.get(routes.home,users)

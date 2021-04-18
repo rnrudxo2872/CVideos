@@ -3,7 +3,7 @@ import Videos from '../models/Video'
 
 export const home = async(req,res) => {
     try{
-        const videos = await Videos.find({});
+        const videos = await Videos.find({}).sort({_id:-1}); //역정렬
         res.render("home", {pageTitle : "Home", videos});
     }catch(error){
         console.log(error);
@@ -14,7 +14,7 @@ export const home = async(req,res) => {
 export const search = (req,res) => {
     const {query:{term : searchBy}} = req;
 
-    res.render("search", {searchBy, videos});
+    res.render("search", {searchBy});
 }
 
 export const videoUpload = (req,res) => res.render('videosupload', {pageTitle : "Video Upload"});
@@ -69,11 +69,21 @@ export const PostvideoEdite = async(req,res) =>{
     } = req;
     
     try {
-        await Videos.findByIdAndUpdate({_id:id},{title, description});
+        await Videos.findOneAndUpdate({_id:id},{title, description});
         res.redirect(routes.videos+routes.videoDetail(id));
     } catch (error) {
      res.redirect(routes.home);   
     }
 }
 
-export const videoDelete = (req,res) => res.render('videosDelete', {pageTitle : "Video Delete"});
+export const videoDelete = async(req,res) => {
+    const {
+        params:{id}
+    } = req;
+    try {
+        await Videos.findOneAndDelete({_id:id});
+        res.redirect(routes.home);
+    } catch (error) {
+        res.redirect(routes.home);
+    }
+}

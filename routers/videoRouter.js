@@ -1,7 +1,8 @@
 import express from "express";
-import { videoUpload, videos, videoDetail, videoEdite, videoDelete, PostvideoUpload, PostvideoEdite } from "../controllers/videosController";
+import { videoUpload, videoDetail, videoEdite, videoDelete, PostvideoUpload, PostvideoEdite } from "../controllers/videosController";
 import { UploadVideo } from "../middlewares";
 import routes from "../routes"
+
 const Vrouter = express.Router();
 
 Vrouter.get(routes.upload, videoUpload);
