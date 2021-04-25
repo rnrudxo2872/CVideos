@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+*{
+  font-family: DoHyeon-Regular sans-serif;
+}
+.icon{
+ //background: url('videoIcon.png');
+  height: 20px;
+  width:20px;
+  display: block;
+}
 html,
 body,
 div,
@@ -125,4 +136,11 @@ input {
   &:active {
     outline: none;
   }
+}
+
+button{
+  outline: none;
+  border: none;
+  box-shadow: 0px 4px 2px rgba(0,0,0,0.36), 2px 1px 3px rgba(0,0,0,0.24);
+  border-radius: 8px;
 }
