@@ -1,0 +1,24 @@
+.header{
+    background-color: $HeadColor;
+    margin-bottom: 50px;
+    .header__wrapper{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        margin: 0 auto;
+        padding: 5px 0px; //위 아래 5, 0
+        max-width: 1200px;
+        .header_column{
+            i{
+                color:rgb(65, 224, 171);
+                font-size: 40px;
+            }
+
+            //자기자신의 2번째 요소, 즉, 2번째 header_column
+            &:nth-child(2){
+                width: 100%;
+                justify-self: center;
+            }
+        }
+    }
+}    

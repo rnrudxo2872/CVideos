@@ -1,22 +1,23 @@
-header.header 
-    .header_column 
-        a(href=routes.home)
-            i.fas.fa-video 
-    .header_column
-        form(action=routes.search, method="get")
-            input(type="text", name="term", placeholder="insert words") 
-    .header_column
-        ul 
-            if !user.isAuthenticated
-                li 
-                    a(href=routes.join) Join 
-                li 
-                    a(href=routes.login) Log in
-            else 
-                li 
-                    a(href=routes.logout) Logout
-                li
-                    a(href=routes.videos+routes.upload) Upload
-                li 
-                    a(href=routes.users + routes.userDetail(user.id)) UserDetail
+header.header
+    .header__wrapper
+        .header_column 
+            a(href=routes.home)
+                i.fas.fa-video 
+        .header_column
+            form(action=routes.search, method="get")
+                input(type="text", name="term", placeholder="insert words") 
+        .header_column
+            ul 
+                if !user.isAuthenticated
+                    li 
+                        a(href=routes.join) Join 
+                    li 
+                        a(href=routes.login) Log in
+                else 
+                    li 
+                        a(href=routes.logout) Logout
+                    li
+                        a(href=routes.videos+routes.upload) Upload
+                    li 
+                        a(href=routes.users + routes.userDetail(user.id)) UserDetail
         
