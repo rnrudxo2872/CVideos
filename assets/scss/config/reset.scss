@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
-*{
-  font-family: DoHyeon-Regular sans-serif;
-}
 .icon{
  //background: url('videoIcon.png');
   height: 20px;
@@ -93,8 +90,8 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: DoHyeon-Regular sans-serif;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 article,

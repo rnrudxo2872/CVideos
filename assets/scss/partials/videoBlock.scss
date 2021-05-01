@@ -1,0 +1,15 @@
+.videoBlock {
+    video {
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+    .videoBlock__title{
+        font-size: 18px;
+        color: rgb(63, 58, 58);
+        text-shadow: 1px 1px 3px;
+        margin-bottom: 10px;
+    }
+    .videoBlock__views{
+        color: rgb(129, 125, 125);
+    }
+  }
